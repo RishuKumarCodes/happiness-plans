@@ -17,7 +17,6 @@ export default function Header() {
     <header className="bg-white backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
       <nav className=" mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <div className="relative w-32 h-8">
@@ -31,20 +30,19 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop Navigation - Center */}
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-semibold transition-colors duration-200"
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
-          {/* Mobile Menu Button - Only visible on mobile, positioned at left when menu is open */}
+          {/* Mobile Menu Btn*/}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -60,11 +58,9 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Right side intentionally empty for clean look */}
           <div className="hidden md:block w-32"></div>
         </div>
 
-        {/* Mobile Navigation */}
         <div className={`md:hidden transition-all duration-300 ease-in-out ${
           isMenuOpen 
             ? "max-h-96 opacity-100" 
