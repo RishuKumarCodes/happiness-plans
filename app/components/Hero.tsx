@@ -7,7 +7,7 @@ export default function Hero() {
 
   const slides = [
     {
-      image: "hero1.jpg",
+      image: "Hero1.jpg",
       alt: "Azores green landscape with ocean view",
     },
     {
